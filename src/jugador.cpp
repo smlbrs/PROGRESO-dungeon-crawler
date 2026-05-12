@@ -1,5 +1,6 @@
 #include <iostream>
-#include "jugador.h"
+#include "../include/jugador.h"
+
 
 jugador::jugador() {
     x=1;
