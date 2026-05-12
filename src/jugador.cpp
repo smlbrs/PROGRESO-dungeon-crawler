@@ -16,4 +16,5 @@ int jugador::getY() {
 void jugador::mover(int dx, int dy) {
     x += dx;
     y += dy;
+    
 }
