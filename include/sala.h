@@ -1,0 +1,16 @@
+#ifndef SALA_H
+#define SALA_H
+
+class Sala {
+private:
+    char mapa[10][10];
+
+public:
+    Sala();
+
+    void dibujar();
+
+    char getCelda(int fila, int columna);
+};
+
+#endif
