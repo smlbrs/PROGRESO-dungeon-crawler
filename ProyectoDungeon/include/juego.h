@@ -6,7 +6,7 @@
 
 class juego {
 private:
-    jugador jugador;
+    jugador player;
     Sala sala;
 
 public:

@@ -1,10 +1,12 @@
 #include <iostream>
 #include "../include/jugador.h"
 
-
 jugador::jugador() {
-    x=1;
-    y=1;
+
+    std::cout << "Constructor jugador\n";
+
+    x = 1;
+    y = 1;
 }
 
 int jugador::getX() {
@@ -16,7 +18,7 @@ int jugador::getY() {
 }
 
 void jugador::mover(int dx, int dy) {
+
     x += dx;
     y += dy;
-    
 }
