@@ -1,3 +1,0 @@
-E:/universidad/pensamiento algoritmico/DungeonGame/build/CMakeFiles/dungeon.dir
-E:/universidad/pensamiento algoritmico/DungeonGame/build/CMakeFiles/edit_cache.dir
-E:/universidad/pensamiento algoritmico/DungeonGame/build/CMakeFiles/rebuild_cache.dir
