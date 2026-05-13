@@ -11,6 +11,7 @@ public:
     void dibujar();
 
     char getCelda(int fila, int columna);
+    void setCelda(int fila, int columna, char valor);
 };
 
 #endif
