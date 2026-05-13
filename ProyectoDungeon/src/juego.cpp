@@ -6,24 +6,29 @@ juego::juego() {
 
 void juego::ejecutar() {
 
+    inventario.agregarObjeto("Llave");
+    inventario.agregarObjeto("Pocion");
+
     char tecla;
 
     while(true) {
 
-        for(int i = 0; i < 10; i++) {
+    for(int i = 0; i < 10; i++) {
 
-            for(int j = 0; j < 10; j++) {
+        for(int j = 0; j < 10; j++) {
 
-                if(i == player.getY() && j == player.getX()) {
-                    std::cout << 'P';
-                }
-                else {
-                    std::cout << sala.getCelda(i, j);
-                }
+            if(i == player.getY() && j == player.getX()) {
+                std::cout << 'P';
             }
-
-            std::cout << std::endl;
+            else {
+                std::cout << sala.getCelda(i, j);
+            }
         }
+
+        std::cout << std::endl;
+    }
+
+    inventario.mostrar();
 
         std::cout << "W para mover arriba \n" << std::endl;
                 std::cout << "A para mover izquierda \n" << std::endl;
