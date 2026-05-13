@@ -12,6 +12,7 @@ public:
     Inventario();
 
     void agregarObjeto(std::string objeto);
+    bool tieneObjeto(std::string objeto);
 
     void mostrar();
 
