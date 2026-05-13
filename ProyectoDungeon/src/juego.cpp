@@ -13,7 +13,7 @@ void juego::ejecutar() {
 
     while(true) {
 
-    for(int i = 0; i < 10; i++) {
+    for(int i = 0; i < 10; i++) {   
 
         for(int j = 0; j < 10; j++) {
 
@@ -50,6 +50,10 @@ void juego::ejecutar() {
             nuevoY >= 0 && nuevoY < 10 &&
             sala.getCelda(nuevoY, nuevoX) != '#'
         ) {
+            if(sala.getCelda(nuevoY, nuevoX) == 'K') {
+            inventario.agregarObjeto("Llave");
+            sala.setCelda(nuevoY, nuevoX, '.');
+}   
 
             player.mover(
                 nuevoX - player.getX(),
