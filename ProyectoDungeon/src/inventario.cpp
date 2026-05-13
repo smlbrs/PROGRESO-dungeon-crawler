@@ -24,3 +24,15 @@ void Inventario::mostrar() {
         std::cout << "- " << objetos[i] << std::endl;
     }
 }
+    bool Inventario::tieneObjeto(std::string objeto) {
+
+    for(int i = 0; i < cantidad; i++) {
+
+        if(objetos[i] == objeto) {
+
+            return true;
+        }
+    }
+
+    return false;
+}
