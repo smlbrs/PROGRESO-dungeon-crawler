@@ -6,7 +6,6 @@ juego::juego() {
 
 void juego::ejecutar() {
 
-    inventario.agregarObjeto("Llave");
     inventario.agregarObjeto("Pocion");
 
     char tecla;
@@ -46,28 +45,27 @@ void juego::ejecutar() {
         if(tecla == 'd') nuevoX++;
 
         if(
-    nuevoX >= 0 && nuevoX < 10 &&
-    nuevoY >= 0 && nuevoY < 10 &&
-    sala.getCelda(nuevoY, nuevoX) != '#'
+        nuevoX >= 0 && nuevoX < 10 &&
+        nuevoY >= 0 && nuevoY < 10
 ) {
 
-    if(sala.getCelda(nuevoY, nuevoX) == 'D') {
+    char celda = sala.getCelda(nuevoY, nuevoX);
+    if(celda == '#') {
+        continue;
+    }
 
+    if(celda == 'D') {
         if(inventario.tieneObjeto("Llave")) {
-
             std::cout << "Puerta abierta\n";
         }
         else {
-
             std::cout << "Necesitas una llave\n";
             continue;
         }
     }
 
-    if(sala.getCelda(nuevoY, nuevoX) == 'K') {
-
+    if(celda == 'K') {
         inventario.agregarObjeto("Llave");
-
         sala.setCelda(nuevoY, nuevoX, '.');
     }
 
@@ -79,7 +77,9 @@ void juego::ejecutar() {
             if(sala.getCelda(nuevoY, nuevoX) == 'K') {
             inventario.agregarObjeto("Llave");
             sala.setCelda(nuevoY, nuevoX, '.');
-}   
+
+
+        }   
 
             player.mover(
                 nuevoX - player.getX(),
