@@ -27,6 +27,8 @@ void juego::ejecutar() {
         std::cout << std::endl;
     }
 
+    std::cout << "\nVidas: " << player.getVidas() << std::endl;
+
     inventario.mostrar();
 
         std::cout << "W para mover arriba \n" << std::endl;
@@ -70,8 +72,15 @@ void juego::ejecutar() {
     }
 
     if(celda == 'E') {
-        std::cout << "\nPerdiste\n";
+        
+        player.perderVida();
+
+        std::cout<<"\n te atacaron \n";
+
+        if(player.getVidas() <= 0) {
+            std::cout<<"perdiste burro";
     break;
+    }
 }
     player.mover(
         nuevoX - player.getX(),
