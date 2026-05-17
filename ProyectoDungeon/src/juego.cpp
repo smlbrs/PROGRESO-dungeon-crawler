@@ -71,6 +71,14 @@ void juego::ejecutar() {
         sala.setCelda(nuevoY, nuevoX, '.');
     }
 
+    if(celda == 'V') {
+        player.curar();
+
+        sala.setCelda(nuevoY, nuevoX, '.');
+
+        std::cout<<"\nTe curaste\n";
+    }
+
     if(celda == 'E') {
         
         player.perderVida();
