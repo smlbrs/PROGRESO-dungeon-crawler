@@ -16,6 +16,7 @@ public:
 
     void mover(int dx, int dy);
     void perderVida();
+    void curar();
 };
 
 #endif  
