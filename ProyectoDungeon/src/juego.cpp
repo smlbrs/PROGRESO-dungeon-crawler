@@ -69,6 +69,10 @@ void juego::ejecutar() {
         sala.setCelda(nuevoY, nuevoX, '.');
     }
 
+    if(celda == 'E') {
+        std::cout << "\nPerdiste\n";
+    break;
+}
     player.mover(
         nuevoX - player.getX(),
         nuevoY - player.getY()
@@ -79,7 +83,8 @@ void juego::ejecutar() {
             sala.setCelda(nuevoY, nuevoX, '.');
 
 
-        }   
+        }  
+    
 
             player.mover(
                 nuevoX - player.getX(),
