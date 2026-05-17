@@ -32,3 +32,10 @@ void jugador::perderVida() {
 
     vidas--;
 }
+
+void jugador::curar() {
+    if(vidas < 3) {
+
+        vidas++;
+    }
+}
