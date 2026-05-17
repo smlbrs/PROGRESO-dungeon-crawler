@@ -7,6 +7,7 @@ jugador::jugador() {
 
     x = 1;
     y = 1;
+    vidas = 3;
 }
 
 int jugador::getX() {
@@ -17,8 +18,17 @@ int jugador::getY() {
     return y;
 }
 
+int jugador::getVidas() {
+    return vidas;
+}
+
 void jugador::mover(int dx, int dy) {
 
     x += dx;
     y += dy;
+}
+
+void jugador::perderVida() {
+
+    vidas--;
 }
